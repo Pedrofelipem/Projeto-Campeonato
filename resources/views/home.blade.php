@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -5,78 +6,36 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Campeonato</title>
+        <title>Campeonato Brasileiro</title>
         <!-- favicon -->
         <link rel="shortcut icon" href="favicon.ico.html" type="image/x-icon">
         <!-- bootstrap -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{url('assets/css/bootstrap.min.css')}}">
         <!-- fontawesome icon  -->
-        <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+        <link rel="stylesheet" href="{{url('assets/css/fontawesome.min.css')}}">
         <!-- flaticon css -->
-        <link rel="stylesheet" href="assets/fonts/flaticon.css">
+        <link rel="stylesheet" href="{{url('assets/fonts/flaticon.css')}}">
         <!-- animate.css -->
-        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="{{url('assets/css/animate.css')}}">
         <!-- Owl Carousel -->
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="{{url('assets/css/owl.carousel.min.css')}}">
         <!-- magnific popup -->
-        <link rel="stylesheet" href="assets/css/magnific-popup.css">
-        <link rel="stylesheet" href="assets/css/odometer.min.css">
+        <link rel="stylesheet" href="{{url('assets/css/magnific-popup.css')}}">
+        <link rel="stylesheet" href="{{url('assets/css/odometer.min.css')}}">
         <!-- stylesheet -->
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="{{url('assets/css/style.css')}}">
         <!-- responsive -->
-        <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="{{url('assets/css/responsive.css')}}">
     </head>
 
     <body>
 
         <!-- preloader begin -->
         <div class="preloader">
-            <img src="assets/img/Campeonato.png" alt="">
+            <img src="{{url('assets/img/Campeonato.png')}}" alt="">
             <span>BRASILEIRÃO 2020</span>
         </div>
         <!-- preloader end -->
-
-        <!-- bet modal begin -->
-        <div class="bet-modal-bg">
-            <div class="bet-modal">
-                <div class="bet-header">
-                    <span class="title">Predict</span>
-                    <button class="cls-btn"><i class="fas fa-times"></i></button>
-                </div>
-                <div class="bet-body">
-                    <div class="place-of-bet">
-                        <span class="place-of-bet-title">real madrid</span>
-                        <input class="place-of-bet-number" type="number" value="1" readonly>
-                    </div>
-                    <div class="bet-descr">
-                        <span class="team-name team-name-1st">america</span>
-                        <span class="img-ic"><img src="assets/img/vs-icon.png" alt=""></span>
-                        <span class="team-name team-name-2nd">iran</span>
-                        <div class="team-score">[<span class="team-first-score">1</span>:<span class="team-second-score">1</span>] 1X2 Live Prediction</div>
-                    </div>
-                    <div class="ctrl-buttons">
-                        <div class="butto-shadow">
-                            <button class="ctrl-button-for-number minus-number">-</button>
-                            <input type="number" value="1" max="99" min="1" class="number-of-stake" placeholder="stake">
-                            <button class="ctrl-button-for-number plus-number">+</button>
-                        </div>
-                    </div>
-                    <div class="bet-total">
-                        <ul>
-                            <li>
-                                <span class="number-of-stake-title">stake :</span>
-                                <input class="number-of-stake-count" type="number" value="1" readonly>
-                            </li>
-                            <li>
-                                <span class="number-of-bet">Total Est. Returns :</span>
-                                <span class="number-of-bet-count">82</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- bet modal end -->
         
         <!-- header begin -->
         <div class="header">
@@ -84,25 +43,20 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-sm-6">
-                            <div class="right-area">
-                                <ul>
-                                    <li></li>
-                                    </li>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="navbar" class="header-bottom">
+        <div id="navbar" class="header-bottom">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-3 col-lg-3 d-xl-flex d-lg-flex d-block align-items-center">
                             <div class="row">
                                 <div class="col-xl-12 col-lg-12 col-6 d-xl-block d-lg-block d-flex align-items-center">
-                                    <div class="logo">
-                                        <a href="index.html">
-                                            <img src="assets/img/logo.png" alt="logo">
+                                    <div >
+                                        <a href="{{route('home')}}">
+                                            <img src="assets/img/logo-brasileirao-2048.png" alt="logo" height="80" >
                                         </a>
                                     </div>
                                 </div>
@@ -119,16 +73,16 @@
                                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                         <ul class="navbar-nav ml-auto">
                                             <li class="nav-item dropdown">
-                                                <a class="nav-link" href="{{url('home.blade.php')">Home</a> 
-                                              </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="{{url('listagem.blade.php')">Listagem</a>
+                                                <a class="nav-link" href="{{route('home')}}">Home</a> 
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="{{url('ranking.blade.php')">Ranking</a>
+                                                <a class="nav-link" href="{{route('listagem')}}">Listagem</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="{{url('criar.blade.php')">Criar Competidor</a>
+                                                <a class="nav-link" href="{{route('ranking')}}">Ranking</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{route('cadastro')}}">Criar Competidor</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -154,7 +108,7 @@
                                 <div class="banner-button">
                                     <ul>
                                         <li>
-                                            <a href="#" class="bet-btn bet-btn-border">explore mais</a>
+                                            <a href="{{route('home')}}" class="bet-btn bet-btn-border">explore mais</a> 
                                         </li>
                                     </ul>
                                 </div>
@@ -162,7 +116,7 @@
                         </div>
                         <div class="col-xl-5 col-lg-4">
                             <div class="banner-img">
-                                <img src="assets/img/logo-brasileirao-2048.png" alt="">
+                                <img src="{{url('assets/img/logo-brasileirao-2048.png')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -177,7 +131,7 @@
                 <div class="row no-gutters">
                     <div class="col-xl-8 col-lg-8">
                         <div class="part-img">
-                            <img src="assets/img/banner-2.jpg" alt="">
+                            <img src="{{url('assets/img/banner-2.jpg')}}" alt="">
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 d-xl-flex d-lg-flex d-block align-items-center">
@@ -219,7 +173,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-feature">
                             <div class="part-icon">
-                                <img src="assets/img/svg/music-and-multimedia.svg" alt="">
+                                <img src="{{url('assets/img/svg/music-and-multimedia.svg')}}" alt="">
                             </div>
                             <div class="part-text">
                                 <h3 class="title">PREVISÃO AO VIVO</h3>
@@ -230,7 +184,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-feature">
                             <div class="part-icon">
-                                <img src="assets/img/svg/announcement.svg" alt="">
+                                <img src="{{url('assets/img/svg/announcement.svg')}}" alt="">
                             </div>
                             <div class="part-text">
                                 <h3 class="title">PROMOÇÕES DIÁRIAS</h3>
@@ -241,7 +195,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-feature">
                             <div class="part-icon">
-                                <img src="assets/img/svg/usability.svg" alt="">
+                                <img src="{{url('assets/img/svg/usability.svg')}}" alt="">
                             </div>
                             <div class="part-text">
                                 <h3 class="title">USABILIDADE LIMPA</h3>
@@ -252,7 +206,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-feature">
                             <div class="part-icon">
-                                <img src="assets/img/svg/browser.svg" alt="">
+                                <img src="{{url('assets/img/svg/browser.svg')}}" alt="">
                             </div>
                             <div class="part-text">
                                 <h3 class="title">NAVEGADOR DE PREVISÃO</h3>
@@ -263,7 +217,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-feature">
                             <div class="part-icon">
-                                <img src="assets/img/svg/exchange.svg" alt="">
+                                <img src="{{url('assets/img/svg/exchange.svg')}}" alt="">
                             </div>
                             <div class="part-text">
                                 <h3 class="title">CONVERSÃO DE MOEDA</h3>
@@ -274,7 +228,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-feature">
                             <div class="part-icon">
-                                <img src="assets/img/svg/key-card.svg" alt="">
+                                <img src="{{url('assets/img/svg/key-card.svg')}}" alt="">
                             </div>
                             <div class="part-text">
                                 <h3 class="title">ALTA SEGURANCA</h3>
@@ -304,7 +258,7 @@
                         <div class="testimonial-slider owl-carousel owl-theme">
                             <div class="single-testimonial">
                                 <div class="part-img">
-                                    <img src="assets/img/testi-user-1.jpg" alt="">
+                                    <img src="{{url('assets/img/testi-user-1.jpg')}}" alt="">
                                 </div>
                                 <div class="part-text">
                                     <i class="icon-for-quot fas fa-quote-left"></i>
@@ -319,7 +273,7 @@
                             </div>
                             <div class="single-testimonial">
                                 <div class="part-img">
-                                    <img src="assets/img/testi-user-1.jpg" alt="">
+                                    <img src="{{url('assets/img/testi-user-1.jpg')}}" alt="">
                                 </div>
                                 <div class="part-text">
                                     <i class="icon-for-quot fas fa-quote-left"></i>
@@ -335,7 +289,7 @@
                             
                             <div class="single-testimonial">
                                 <div class="part-img">
-                                    <img src="assets/img/testi-user-1.jpg" alt="">
+                                    <img src="{{url('assets/img/testi-user-1.jpg')}}" alt="">
                                 </div>
                                 <div class="part-text">
                                     <i class="icon-for-quot fas fa-quote-left"></i>
@@ -362,8 +316,8 @@
                 <div class="row justify-content-xl-between justify-content-lg-between justify-content-md-center">
                     <div class="col-xl-5 col-lg-5">
                         <div class="part-img">
-                            <img class="app" src="assets/img/app.png" alt="">
-                            <img class="app" src="assets/img/app.png" alt="">
+                            <img class="app" src="{{url('assets/img/app.png')}}" alt="">
+                            <img class="app" src="{{url('assets/img/app.png')}}" alt="">
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-7 col-md-10 d-xl-flex d-lg-flex d-block align-items-xl-baseline align-items-lg-center">
@@ -375,12 +329,12 @@
                                 <ul>
                                     <li>
                                         <a href="#">
-                                            <img src="assets/img/apple.png" alt="">
+                                            <img src="{{url('assets/img/apple.png')}}" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <img src="assets/img/and.png" alt="">
+                                            <img src="{{url('assets/img/and.png')}}" alt="">
                                         </a>
                                     </li>
                                 </ul>
@@ -388,7 +342,7 @@
                             <div class="app-features">
                                 <div class="single-feature">
                                     <div class="part-icon">
-                                        <img src="assets/img/svg/ram.svg" alt="">
+                                        <img src="{{url('assets/img/svg/ram.svg')}}" alt="">
                                     </div>
                                     <span class="title">
                                         leve
@@ -396,7 +350,7 @@
                                 </div>
                                 <div class="single-feature">
                                     <div class="part-icon">
-                                        <img src="assets/img/svg/memory-card.svg" alt="">
+                                        <img src="{{url('assets/img/svg/memory-card.svg')}}" alt="">
                                     </div>
                                     <span class="title">
                                         2MB
@@ -404,7 +358,7 @@
                                 </div>
                                 <div class="single-feature">
                                     <div class="part-icon">
-                                        <img src="assets/img/svg/dark-and-light.svg" alt="">
+                                        <img src="{{url('assets/img/svg/dark-and-light.svg')}}" alt="">
                                     </div>
                                     <span class="title">
                                         CLARO E ESCURO
@@ -412,7 +366,7 @@
                                 </div>
                                 <div class="single-feature">
                                     <div class="part-icon">
-                                        <img src="assets/img/svg/easy-return.svg" alt="">
+                                        <img src="{{url('assets/img/svg/easy-return.svg')}}" alt="">
                                     </div>
                                     <span class="title">
                                         FÁCIL DE USAR
@@ -433,10 +387,10 @@
                 <div class="row justify-content-between">
                     <div class="col-xl-4 col-lg-5 col-md-10">
                         <div class="about-widget">
-                            <a class="logo" href="index.html">
-                                <img src="assets/img/logo.png" alt="">
+                            <a href="{{route('home')}}">
+                                <img src="assets/img/logo-brasileirao-2048.png" alt="logo" height="80" >
                             </a>
-                            <p>PerediOn oferece a você todas as melhores previsões online de todos os cantos do planeta com milhares de mercados de previsões online</p>
+                            <p>Brasileirão oferece a você todas as melhores previsões online de todos os cantos do planeta com milhares de mercados de previsões online</p>
                             <div class="social">
                                 <ul>
                                     <li>
@@ -462,7 +416,7 @@
                                 <ul>
                                     <li>
                                         <span class="icon">
-                                            <img src="assets/img/svg/email.svg" alt="">
+                                            <img src="{{url('assets/img/svg/email.svg')}}" alt="">
                                         </span>
                                         <span class="text">
                                             <span class="title">Envie-nos</span>
@@ -471,7 +425,7 @@
                                     </li>
                                     <li>
                                         <span class="icon">
-                                            <img src="assets/img/svg/phone-call.svg" alt="">
+                                            <img src="{{url('assets/img/svg/phone-call.svg')}}" alt="">
                                         </span>
                                         <span class="text">
                                             <span class="title">Entrar em contato</span>
@@ -512,7 +466,7 @@
                     </div>
                     <div class="col-xl-2 col-lg-3 col-md-3">
                         <div class="useful-links">
-                            <h3>Connect With Us</h3>
+                            <h3>Conecte-se conosco</h3>
                             <ul>
                                 <li>
                                     <a href="#">SOBRE NÓS</a>
@@ -559,23 +513,23 @@
                                     </h6>
                                     <div class="all-method">
                                         <div class="single-method">
-                                            <img src="assets/img/brand-1.png" alt="">
+                                            <img src="{{url('assets/img/brand-1.png')}}" alt="">
                                         </div>
                                         <div class="single-method">
-                                            <img src="assets/img/brand-2.png" alt="">
+                                            <img src="{{url('assets/img/brand-2.png')}}" alt="">
                                         </div>
                                         <div class="single-method">
-                                            <img src="assets/img/brand-3.png" alt="">
+                                            <img src="{{url('assets/img/brand-3.png')}}" alt="">
                                         </div>
                                         <div class="single-method">
-                                            <img src="assets/img/brand-4.png" alt="">
+                                            <img src="{{url('assets/img/brand-4.png')}}" alt="">
                                         </div>
                                         <div class="single-method">
-                                            <img src="assets/img/brand-5.png" alt="">
+                                            <img src="{{url('assets/img/brand-5.png')}}" alt="">
                                         </div>
                                         
                                         <div class="single-method">
-                                            <img src="assets/img/brand-5.png" alt="">
+                                            <img src="{{url('assets/img/brand-5.png')}}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -592,7 +546,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-10 col-lg-10">
-                        PerediOn é um template html de previsão de esportes, publicado por autworks throgh envato marketplace. Você pode usar este modelo em qualquer tipo de previsão de esporte. como futebol. todos os direitos reservados por autworks © 2020.
+                        Brasileiraõ previsão, publicado por autworks throgh envato marketplace. Você pode usar este modelo em qualquer tipo de previsão de esporte. como futebol. todos os direitos reservados por autworks © 2020.
                     </div>
                 </div>
             </div>
@@ -617,23 +571,23 @@
         
         <!-- jquery -->
         <!-- <script src="assets/js/jquery.js"></script> -->
-        <script src="assets/js/jquery-3.4.1.min.js"></script>
+        <script src="{{url('assets/js/jquery-3.4.1.min.js')}}"></script>
         <!-- bootstrap -->
-        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="{{url('assets/js/bootstrap.min.js')}}"></script>
         <!-- owl carousel -->
-        <script src="assets/js/owl.carousel.js"></script>
+        <script src="{{url('assets/js/owl.carousel.js')}}"></script>
         <!-- magnific popup -->
-        <script src="assets/js/jquery.magnific-popup.js"></script>
+        <script src="{{url('assets/js/jquery.magnific-popup.js')}}"></script>
         <!-- filterizr js -->
-        <script src="assets/js/jquery.filterizr.min.js"></script>
+        <script src="{{url('assets/js/jquery.filterizr.min.js')}}"></script>
         <!-- wow js-->
-        <script src="assets/js/wow.min.js"></script>
+        <script src="{{url('assets/js/wow.min.js')}}"></script>
         <!-- clock js -->
-        <script src="assets/js/clock.min.js"></script>
-        <script src="assets/js/jquery.appear.min.js"></script>
-        <script src="assets/js/odometer.min.js"></script>
-        <script src="assets/js/oddometer-active.js"></script>
+        <script src="{{url('assets/js/clock.min.js')}}"></script>
+        <script src="{{url('assets/js/jquery.appear.min.js')}}"></script>
+        <script src="{{url('assets/js/odometer.min.js')}}"></script>
+        <script src="{{url('assets/js/oddometer-active.js')}}"></script>
         <!-- main -->
-        <script src="assets/js/main.js"></script>
+        <script src="{{url('assets/js/main.js')}}"></script>
     </body>
 </html>
