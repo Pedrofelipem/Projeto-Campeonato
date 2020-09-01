@@ -4,12 +4,11 @@
 @section('aba-titulo', 'lISTAGEM')
 @section('conteudo_principal')
 
-
 <div class="standing">
     <div class="container">
         <div class="standing-list-cover">
             <div class="standing-team-list">
-                <h4 class="result-title">LISTA DE COMPETIDORES ORDEM FALBÉTICA</h4>
+                <h4 class="result-title">LISTA DE COMPETIDORES ORDEM ALFABÉTICA</h4>
                 <table class="table">
                     <thead>
                         <tr>
@@ -18,29 +17,28 @@
                             <th scope="col">Pontos</th>
                         </tr>
                     </thead>
+                    @foreach($competidor as $competidores)
                         <tr>
-                            <td>1</td>
+                            <td>{{$competidores->id}}</td>
                             <td>
+                            <a href="{{route('informacao.competidor')}}">
                                 <span class="single-team">
                                 <span class="logo">
                                     <img src="assets/img/team-1.png" alt="">
                                 </span>
                                 <span class="text">
-                                    Khulna Tigers
+                                <span class="diff"> {{$competidores->nome}}</span>
                                 </span>
                                 </span>
+                            </a>
                             </td>
-                            <td style="margin-right: 50px;">103</td>
+                            <td style="margin-right: 50px;">{{$competidores->ponto}}</td>
                         </tr>
+                    @endforeach
                 </table>
              </div>
         </div>
     </div>
 </div>
-
-
-
-
-
 
 @endsection

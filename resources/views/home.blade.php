@@ -76,13 +76,13 @@
                                                 <a class="nav-link" href="{{route('home')}}">Home</a> 
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="{{route('listagem')}}">Listagem</a>
+                                                <a class="nav-link" href="{{route('listagem.competidor')}}">Listagem</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="{{route('ranking')}}">Ranking</a>
+                                                <a class="nav-link" href="{{route('ranking.competidor')}}">Ranking</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="{{route('cadastro')}}">Criar Competidor</a>
+                                                <a class="nav-link" href="{{route('cadastro.competidor')}}">Criar Competidor</a>
                                             </li>
                                         </ul>
                                     </div>

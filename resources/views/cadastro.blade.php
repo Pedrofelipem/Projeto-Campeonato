@@ -5,50 +5,45 @@
 @section('conteudo_principal')
 
 
-        <div class="register">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-7 col-lg-8 col-md-8">
-                        <div class="section-title">
-                            <h2>REGISTRE-SE PARA PREVER AGORA</h2>
-                            <p> Brasileirão e Série A, é a liga brasileira de futebol profissional entre clubes do Brasil, sendo a principal competição futebolística no país.</p>
-                        </div>
-                    </div>
+<div class="register">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-8">
+                <div class="section-title">
+                    <h2>REGISTRE-SE PARA PREVER AGORA</h2>
+                    <p> Brasileirão e Série A, é a liga brasileira de futebol profissional entre clubes do Brasil, sendo a principal competição futebolística no país.</p>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-xl-9 col-lg-9">
-                        </div>
-                        <div class="all-form">
-                            <div class="single-form" id="first-step">
-                                <form action="{{route('salvarcompetidor')}}" method="post">
-                                    @csrf 
-                                    <div>
-                                        <label for="firstName">Nome</label>
-                                        <input type="text" value="" id="firstName" placeholder="Ex: Mundial@gmail.com"/>  
-                                    </div>
-                                    <div>
-                                        <label for="lastName">Descrição</label>
-                                        <input type="text" value="" id="lastName" placeholder="Ex: Mundial@gmail.com"/>
-                                    </div>
-                                    <div>
-                                        <label for="emailAdd">imagem</label>
-                                        <input type="image" id="emailAdd" placeholder="Ex: Mundial@gmail.com"/>
-                                    </div>
-                                    <div>
-                                        <input type="number" value="" id="dOb" placeholder="Ex: Mundial@gmail.com"/>
-                                        <label for="dOb">Pontos</label>
-                                    </div><p>Ao clicar em "CADASTRAR", você confirma que leu e entendeu Privacy & Coockie Policy, e concorda com seus termos.</p>
-                                    <input class="next" type="submit">CADASTRAR</input>
-                                </form>
-                            
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-9 col-lg-9">
+                </div>
+                <div class="all-form">
+                    <div class="single-form" id="first-step">
+                        <form action="{{route('salvar.competidor')}}" method="post">
+                            @csrf 
+                            <div>
+                                <input type="text" name="nome"  id="firstName" placeholder="São Paulo FC"/>  
                             </div>
-                        </div>
+                            
+                            <div>
+                                <input type="text" name="descricao" placeholder=" São Paulo Futebol Clube é uma associação esportiva brasileira da cidade de São Paulo."/>
+                            </div>
+                            
+                            <!-- <div>
+                                <input type="image" name="imagem" id="emailAdd" placeholder="Ex: Click Upload Imagem"/>
+                            </div>
+                            -->
+                            <div>
+                                <input type="number" name="ponto" id="dOb" placeholder="Ex: 150"/>
+                            </div><p>Ao clicar em "CADASTRAR", você confirma que leu e entendeu Privacy & Coockie Policy, e concorda com seus termos.</p>
+                            <input class="next" type="submit" value="CADASTRAR"/>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
+    </div>
+</div>
 
 @endsection

@@ -1,7 +1,7 @@
 @extends('template')
 
-@section('titulo', 'RANKING BRASILEIRÃO')
-@section('aba-titulo', 'RANKING')
+@section('titulo', 'INFORMAÇÕES DO COMPETIDOR')
+@section('aba-titulo', 'INFORMAÇÕES')
 
 @section('conteudo_principal')
 
@@ -9,29 +9,28 @@
     <div class="container">
         <div class="standing-list-cover">
             <div class="standing-team-list">
-                <h4 class="result-title">LISTAGEM DE PONTUAÇÃO</h4>
+                <h4 class="result-title">LISTA DE COMPETIDORES ORDEM ALFABÉTICA</h4>
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">Id</th>
                             <th scope="col">Equipe</th>
-                            <th scope="col">Pontos</th>
                         </tr>
                     </thead>
                     @foreach($competidor as $competidores)
                         <tr>
-                            <td scope="row">{{$competidores->id}}</td>
                             <td>
+                            <a href="{{route('informacao.competidor')}}">
                                 <span class="single-team">
                                 <span class="logo">
                                     <img src="assets/img/team-1.png" alt="">
                                 </span>
                                 <span class="text">
-                                    {{$competidores->nome}}
+                                <span class="diff"> {{$competidores->nome}}</span>
                                 </span>
                                 </span>
+                            </a>
                             </td>
-                            <td style="margin-right: 50px;"><span class="diff">{{$competidores->ponto}}</span></td>
+                            <td style="margin-right: 50px;">{{$competidores->descricao}}</td>
                         </tr>
                     @endforeach
                 </table>
